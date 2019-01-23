@@ -1,0 +1,630 @@
+/* 基本样式 */
+html {
+    height: 100%;
+    width: 100%;
+    font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif
+}
+
+* {
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.clearfix::after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+  }
+  .clearfix {
+    zoom: 1;
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+  /* 左边固定盒子 */
+.left_photo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 420px;
+    background-size: cover;
+}
+.left_photo img{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:1;
+}
+/* 左边logo部分 */
+.left_photo .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/logo.png) no-repeat;
+    background-size: 36px 43px;
+    /* background:red; */
+    height: 43px;
+    line-height: 43px;
+    padding-left: 46px;
+    margin-left: 30px;
+    margin-top: 18px;
+    font-size: 36px;
+    display: block;
+   
+    z-index:200;
+}
+.left_photo .logo a{
+    color:#000;
+}
+
+/* 上边top盒子 */
+.top{
+    min-width: 560px;
+    top: 0;
+    left: 0;
+    text-align: right;
+    position: relative;
+   
+}
+/* 右边第一个 */
+.top .items{
+    margin:20px 40px 0 0;
+    font-size: 16px;
+    color: rgba(0,0,0,.902);
+    padding: 10px 0 0;
+    line-height: 24px;
+}
+.top .advice > a{
+    color: #000;
+    opacity: .6;
+    display: inline-block;
+}
+.top .advice > a:hover{
+    opacity: 1;
+}
+/* 右边第二个 */
+.top .language{
+    opacity: .6;
+    color: #000;
+    position: relative;
+    
+}
+.top .language:hover{
+    opacity: 1;
+}
+#down_sanjiao{
+    display: block;
+    position: absolute;
+    right: -10px;
+    top:16px;
+}
+ #up_sanjiao{
+    display: none;
+    position: absolute;
+    right: -10px;
+    top:16px;
+
+}
+#up_sanjiao:hover,
+#down_sanjiao:hover{
+cursor: pointer;
+}
+.top .language ul{
+    position: absolute;
+    left:0;
+    top:35px;
+}
+.top .language ul li{
+    line-height: 30px;
+    display: none;
+  
+}
+.top .language ul li > a{
+    opacity: .6;
+    color: #000;
+   
+   
+}
+
+/* 右边第三个 */
+.top .email{
+    opacity: .6;
+}
+.top .email > a {
+    color: #000;
+    background: url(../img/mail-entry.png) no-repeat;
+    height: 15px;
+    line-height: 15px;
+    margin: 4.5px 0;
+    padding: 0 0 0 25px
+}
+.top .email:hover{
+    opacity: 1;
+}
+/* 右边第四个 */
+.top .qqnumber{
+    position: relative;
+    height:100%;
+  
+}
+.top .qqnumber > a {
+    position: relative;
+    display: block;
+    float: right;
+   
+}
+.top .qqnumber > a img{
+    position:absolute;
+    left:0px;
+    bottom:0;
+}
+.top .qqnumber .qqlianghao{
+    border-radius: 6px;
+    background: #f54444;
+    background: linear-gradient(126deg, #fc4754, #ff794c) #f54444;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    margin: 0px 0 0 5px;
+    padding: 0 10px 0 24px;
+    color: #fff;
+    font-weight: 300;
+}
+.top .qqnumber .tanchu_content{
+    width: 290px;
+    border-radius: 6px;
+    border: solid 1px #eee;
+    background-color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .12);
+    /* overflow: hidden; */
+    padding: 0;
+    display:none;
+    position: absolute;
+    top:35px;
+    right:0;
+    z-index:1;
+}
+.top .qqnumber .tanchu_content .upper_box{
+    border-bottom: solid 1px #f0f0f0;
+    height: 49px;
+    position: relative;
+}
+.top .qqnumber .tanchu_content .upper_box > a{
+    display: block;
+    
+    text-align: center;
+    border-left: solid 1px #eee;
+    height: 49px;
+    width: 40px;
+    background: 0 0;
+    float: right;
+    z-index: 1;
+    transition: none;
+    background:url('../img/keyi.jpg')no-repeat 10px 12px;
+    background-size:25px 25px;
+}
+.top .qqnumber .tanchu_content .upper_box > a:hover{
+    /* background-color: #f54444;
+    background-image: linear-gradient(54deg, #fc4754, #ff794c) */
+}
+.top .qqnumber .tanchu_content .upper_box input{
+    border: none;
+    margin-right: 41px;
+    padding:15px 0;
+    font-size:16px;
+    opacity: .6;
+}
+
+.top .qqnumber .tanchu_content .bottom_box{
+    padding: 24px 0;
+    font-size: 16px;
+    text-align: center;
+   
+   
+}
+
+.top .qqnumber .tanchu_content .bottom_box >a{
+    color:#42A6FF;
+}
+
+/* 主体盒子 */
+
+.whole_box{
+    margin-left: 480px;
+    position: relative;
+    height: 100%;
+}
+.whole_box .main_box{
+    position: absolute;
+    padding-bottom: 10px;
+    top: 0px;
+    width: 100%;
+}
+.whole_box .main_box .form{
+    position: relative;
+    margin: 50px auto;
+    width: 480px;
+}
+.whole_box .main_box .form .top_tips h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 350;
+}
+.whole_box .main_box .form .top_tips div{
+    font-size: 28px;
+    margin-bottom: 64px;
+    line-height: 1.2;
+    color: #333;
+}
+.whole_box .main_box .form .top_tips div > a{
+    font-size:24px;
+    outline: 0;
+    text-decoration: none;
+    color: #359eff;
+    margin-left:50px;
+}
+.whole_box .main_box .form .bottom_form > input{
+    /* outline: 0; */
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    background: 0 0;
+    text-align: left;
+    font-size: 20px;
+    width: 438px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    margin-bottom:50px;
+}
+.whole_box .main_box .form .bottom_form > span{
+    display: none;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon_light.f0aea65.png") no-repeat 0 -95px; 
+    
+    position: absolute;
+    top:188px;
+    right:20px;
+   
+}
+
+.whole_box .main_box .form .bottom_form .nicheng{
+ 
+    /* background: url('../img/gantan.jpg') no-repeat; */
+    /* background:url('../img/gantan.jpg') -15px -130px no-repeat;
+    background-size: 15px 15px; */
+    margin:-40px 0 30px 20px;
+    /* display: none; */
+    font-size:14px;
+    color: red;
+   display: none;
+}
+.nicheng > span{
+    display: block;
+    width:18px;
+    height:18px;
+    background:url('../img/error.png') no-repeat ;
+    background-size: 100%; 
+    position: absolute;
+    top:232px;
+    left:0px;
+   
+}
+.whole_box .main_box .form .bottom_form .mimimimima {
+    position: relative;
+}
+
+.whole_box .main_box .form .bottom_form .mimimimima #password{
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    background: 0 0;
+    text-align: left;
+    font-size: 20px;
+    width: 438px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    margin-bottom:50px;
+}  
+.whole_box .main_box .form .bottom_form .mimimimima .all_right {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}
+.whole_box .main_box .form .bottom_form .mimimimima .all_right span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    /* background: url('../img/tick.png') no-repeat;   */
+    background: url("../img/icon_light.f0aea65.png") no-repeat 0 -80px;
+}   
+.whole_box .main_box .form .bottom_form .mimimimima .all_right span.correct {
+    background-position: 0 -95px;
+}
+.whole_box .main_box .form .bottom_form .panduan{
+    width: 400px;
+    position: absolute;
+    top: 50px;
+   
+}
+.whole_box .main_box .form .bottom_form .panduan  p {
+  padding:1px 0px;
+}
+.whole_box .main_box .form .bottom_form .panduan > p span{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url("../img/login_spirit.png") no-repeat -216px -34px;
+
+   
+}
+.whole_box .main_box .form .bottom_form .panduan  p span.correct{
+    background-position: -264px -34px;
+}
+
+
+.whole_box .main_box .form .bottom_form .notnull{
+    font-size:14px;
+    color: red;
+    padding-left:20px;
+    position: absolute;
+    left:0;
+    top:333px;
+    display: none;
+}
+.whole_box .main_box .form .bottom_form .notnull > span{
+    display: block;
+    width:18px;
+    height:18px;
+    background:url('../img/error.png') no-repeat ;
+    background-size: 100%; 
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
+.whole_box .main_box .form .bottom_form .visibility {
+    display:none;
+}
+.whole_box .main_box .form .bottom_form .visibility > span{
+    display: block;
+    width:20px;
+    height:15px;
+    background:url('../img/tick.png') no-repeat ;
+    background-size: 100%; 
+    position: absolute;
+    top:290px;
+    right:10px;
+    /* display:none; */
+}
+.whole_box .main_box .form .bottom_form .input-tips{
+    font-size: 14px;
+    height: 14px;
+    color: #999;
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    position: absolute;
+    left:0;
+    top:228px;
+  
+}
+.whole_box .main_box .form .bottom_form .two_input input{
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    background: 0 0;
+    text-align: left;
+    font-size: 20px;
+    width: 112px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    margin-bottom:5px;
+    
+}
+.whole_box .main_box .form .bottom_form .two_input {
+   position: relative;
+}
+.whole_box .main_box .form .bottom_form .two_input img{
+    position: absolute;
+    top:25px;
+    left:120px;;
+}
+#down_sanjiao1{
+    display: block;
+}
+#up_sanjiao1{
+    display: none;
+}
+#up_sanjiao1:hover,
+#down_sanjiao1:hover{
+    cursor: pointer;
+}
+#phone_number{
+    position: absolute;
+    right:0;
+    top:0;
+    width:250px;
+}
+.whole_box .main_box .form .bottom_form .two_input .huadonghezi{
+    top: 51px;
+    width: 480px;
+    height: 200px;
+    border: 1px #b2b2b2 solid;
+    background-color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,.15);
+    font-size: 20px;
+    position: absolute;
+    z-index: 2;
+    overflow:auto;
+    display:none; 
+}
+.whole_box .main_box .form .bottom_form .two_input .huadonghezi li:hover{
+    background:#ccc;
+    color:#fff;
+    cursor: pointer;
+}
+
+.form .bottom_form p{
+    font-size: 14px;
+    height: 14px;
+    color: #999;
+    bottom: 10;
+}
+.whole_box .main_box .form .bottom_form .writephone{
+    font-size:14px;
+    color: red;
+    /* padding-left:30px; */
+    text-indent: 20px;
+    position: absolute;
+    bottom:185px;
+    left:0px;
+    display: none;
+}
+.whole_box .main_box .form .bottom_form .writephone > span{
+    display:block;
+    width:18px;
+    height:18px;
+    background:url('../img/error.png') no-repeat ;
+    background-size: 100%; 
+    position: absolute;
+    top:0px;
+    bottom:0px;
+}
+.whole_box .main_box .form .bottom_form .two_input2{
+    display:none;
+}
+
+.whole_box .main_box .form .bottom_form .two_input2 input{
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    background: 0 0;
+    text-align: left;
+    font-size: 20px;
+    width: 112px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    margin-top:20px;
+}
+.whole_box .main_box .form .bottom_form .two_input2 #send_message{
+    width:250px;
+    margin-left:28px;
+    color:#fff;
+    font-size:20px;
+    background-color: #3487ff;
+    text-align: center;
+   
+}
+.whole_box .main_box .form .bottom_form .two_input2 #send_message:hover{
+    background-color:#3580eb;
+}
+.whole_box .main_box .form .bottom_form .submit{
+    border: 1px #3083ff solid;
+    border-radius: 4px;
+    background-color: #3487ff;
+    box-shadow: 0 5px 8px 0 rgba(24,95,255,.1);
+    color: #fff;
+    text-align: center;
+    font-weight: lighter;
+    background-image: linear-gradient(0deg,#398bff,#3083ff);
+    width: 478px;
+    height: 60px;
+    margin: 40px 0 8px;
+    font-size: 24px;
+
+}
+.whole_box .main_box .form .bottom_form .qqzone{
+    line-height: 30px;
+    font-size: 13px;
+    color: #aaa;
+}
+.whole_box .main_box .form .bottom_form .qqzone span{
+    position: absolute;
+    left:20px;
+    bottom:80px;
+}
+.whole_box .main_box .form .bottom_form .duihao1{
+    display: block;
+}
+.whole_box .main_box .form .bottom_form .kongge1{
+    display: none;
+}
+.whole_box .main_box .form .bottom_form .duihao2{
+    display: block;
+}
+.whole_box .main_box .form .bottom_form .kongge2{
+    display: none;
+}
+.whole_box .main_box .form .bottom_form .agree_message{
+    line-height: 30px;
+    font-size: 13px;
+    color: #aaa;
+}
+.whole_box .main_box .form .bottom_form .agree_message span{
+    position: absolute;
+    left:20px;
+    bottom:60px;
+   
+}
+.footer{
+    font-size: 14px;
+    color: #bbb;
+    text-align: center;
+    margin: 50px 0;
+    font-weight: lighter;
+}
+#down-sanjiao{
+    position: absolute;
+    right:200px;
+    bottom:70px;
+    display:block;
+}
+#up-sanjiao:hover,
+#down-sanjiao:hover{
+    cursor: pointer;
+}
+#up-sanjiao{
+    position: absolute;
+    right:200px;
+    bottom:70px;
+    display: none;
+}
+.whole_box .main_box .form .bottom_form .shouce{
+    display:none;
+    padding-left: 18px;
+    font-size:14px;
+    position: absolute;
+}
+.whole_box .main_box .form .bottom_form .shouce a{
+    outline: 0;
+    text-decoration: none;
+    color: #359eff;
+
+}
+.whole_box .main_box .form .duanxin{
+    width:478px;
+    height:367px;
+    display: none;
+    position:absolute;
+    left:0;
+    top:300px;
+    border:10px solid #ccc;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .12);
+}
+.whole_box .main_box .form .duanxin img{
+    width:100%;
+    height:100%;
+}
